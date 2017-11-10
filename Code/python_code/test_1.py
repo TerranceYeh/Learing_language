@@ -1,5 +1,20 @@
-def test(a , b=-99):
-    if a > b :
-        return True
-    else:
-        return False
+def change():
+    a = 90
+    print(a)
+a = 9
+print("Before the function call ", a)
+print("inside change function",end=" ")
+change()
+print("After the function call ", a)
+
+import sys
+if len(sys.argv) < 3:
+    print("Wrong parameter")
+    print("./copyfile.py file1 file2")
+    sys.exit(1)
+f1 = open(sys.argv[1])
+s = f1.read()
+f1.close()
+f2 = open(sys.argv[2], 'w')
+f2.write(s)
+f2.close()
